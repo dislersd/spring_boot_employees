@@ -20,4 +20,15 @@ public class EmpList {
         }
         return null;
     }
+
+    public List<Employee> findEmployees(CheckEmployee tester) {
+        List<Employee> tempEmpList = new ArrayList<>();
+
+        for (Employee e : empList) {
+            if (tester.test(e)) {
+                tempEmpList.add(e);
+            }
+        }
+        return tempEmpList;
+    }
 }
