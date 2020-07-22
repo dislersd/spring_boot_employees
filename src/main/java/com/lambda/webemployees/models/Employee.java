@@ -1,9 +1,16 @@
 package com.lambda.webemployees.models;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+
+
+// creating Employee table with Java class
 
 @Entity
+@Table(name = "employees")
 public class Employee {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     long empid;
     String fname;
     String lname;
